@@ -1,0 +1,57 @@
+:root {
+    --blue: #13154e;
+    --creme: #edccad;
+    --coral: #FF7F50;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100dvh;
+    width: 100dvw;
+    display: grid;
+    grid-template-rows: 10dvh 35dvh 30dvh 25dvh;
+    
+}
+
+header {
+    background-color: var(--blue);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.2rem;
+}
+
+.logo {
+    color: var(--creme);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav img {
+    width: 2.5rem
+}
+
+menu {
+    display: none;
+}
+
+.player {
+    background-color: var(--blue);
+    opacity: 0.95;
+}
+
+.schedule {
+    background-color: var(--coral);
+    opacity: 0.85;
+}
