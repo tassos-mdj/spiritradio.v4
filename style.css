@@ -13,7 +13,7 @@ body {
     height: 100dvh;
     width: 100dvw;
     display: grid;
-    grid-template-rows: 10dvh 35dvh auto;
+    grid-template-rows: 10dvh 35dvh 235px;
     
 }
 
@@ -222,8 +222,8 @@ input {
   }
 
   .slideshow-container img {
-    height:30dvh;
-    width: auto;
+    width: 100%;
+    height:auto;
     margin: 0 auto;
     position: relative;
   }
