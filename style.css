@@ -4,6 +4,12 @@
     --coral: #FF7F50;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -13,7 +19,7 @@ body {
     height: 100dvh;
     width: 100dvw;
     display: grid;
-    grid-template-rows: 10dvh 35dvh 235px;
+    grid-template-rows: 10dvh 35dvh;
     
 }
 
@@ -208,14 +214,11 @@ input {
 }
 
 .schedule {
-    background-color: rgba(255,127,80,0.7);
-    
+    /* background-color: rgba(255,127,80,0.7); */
 }
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 100dvw;
-    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -223,9 +226,6 @@ input {
 
   .slideshow-container img {
     width: 100%;
-    height:auto;
-    margin: 0 auto;
-    position: relative;
   }
  
   /* Hide the images by default */
@@ -233,7 +233,7 @@ input {
     display: none;
   }
   
-  /* Next & previous buttons */
+  /* Next & previous buttons
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -250,19 +250,19 @@ input {
   }
   
   /* Position the "next button" to the right */
-  .next {
+  /* .next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
+  } */
   
   /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
+  /* .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
-  }
-
+  } */
+/* 
   .active, .dot:hover {
     background-color: #717171;
-  }
+  } */ */
   
   /* Fading animation */
   .fade {
@@ -274,3 +274,45 @@ input {
     from {opacity: .4}
     to {opacity: 1}
   } 
+
+
+  /* Shows Gallery */
+
+  
+  
+  .gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70vh;
+  }
+  
+  .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: flex 0.8s ease;
+    
+    &:hover{
+      flex: 7;
+    }
+  }
+  
+  .item-1 { 
+    background-image: url('https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80');
+  }
+  
+  .item-2 { 
+    background-image: url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80');
+  }
+  
+  .item-3 { 
+    background-image: url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80');
+  }
+  
+  .item-4 { 
+    background-image: url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80');
+  }
+
