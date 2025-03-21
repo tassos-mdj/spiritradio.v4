@@ -1,7 +1,7 @@
 :root {
-    --blue: #13154e;
-    --creme: #edccad;
-    --coral: #FF7F50;
+  --blue: #13154e;
+  --creme: #edccad;
+  --coral: #FF7F50;
 }
 
 * {
@@ -11,91 +11,95 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-    height: 100dvh;
-    width: 100dvw;
-    display: grid;
-    grid-template-rows: 10dvh 35dvh;
-    overflow: hidden;
+  display: grid;
+  grid-template-rows: 100dvh 100dvh;
+}
+
+.first-page-container {
+  height: 100dvh;
+  width: 100dvw;
+  display: grid;
+  grid-template-rows: 10dvh 35dvh;
+  overflow: hidden;
 }
 
 header {
-    background-color: var(--blue);
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.2rem;
+  background-color: var(--blue);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.2rem;
 }
 
 .logo {
-    color: var(--creme);
-    margin: 0;
-    font-size: 2.5em;
-    font-family: 'Grand Hotel', cursive;
+  color: var(--creme);
+  margin: 0;
+  font-size: 2.5em;
+  font-family: 'Grand Hotel', cursive;
 }
 
 .nav {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .nav img {
-    width: 2.5rem
+  width: 2em;
 }
 
 menu {
-    display: none;
+  display: none;
 }
 
 .player {
-    background-color: var(--blue);
-    opacity: 0.95;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: stretch;
-    gap: 1.5em;
-    padding-top: 0.8em;
+  background-color: var(--blue);
+  opacity: 0.95;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  gap: 1.5em;
+  padding-top: 0.8em;
 }
 
 /* Play button */
 
 input {
-    opacity: 0;
-    position: absolute;
-    pointer-events: none;
-  }
-  
-  label {
-    display: grid;
-    border: none;
-    background-color: gray;
-    --w: 100px;
-    width: var(--w);
-    height: var(--w);
-    border-radius: 50%;
-    place-items: center;
-    cursor: pointer;
-  }
-  
-  .play_pause_icon {
-    --w: 50%;
-    width: var(--w);
-    height: var(--w);
-    background: white;
-    translate: 0 0;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  .play {
-    clip-path: polygon(
-      20% 0,
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+label {
+  display: grid;
+  border: none;
+  background-color: gray;
+  --w: 100px;
+  width: var(--w);
+  height: var(--w);
+  border-radius: 50%;
+  place-items: center;
+  cursor: pointer;
+}
+
+.play_pause_icon {
+  --w: 50%;
+  width: var(--w);
+  height: var(--w);
+  background: white;
+  translate: 0 0;
+  transition: all 0.2s ease-in-out;
+}
+
+.play {
+  clip-path: polygon(20% 0,
       20% 100%,
       90% 50%,
       90% 50%,
@@ -103,15 +107,13 @@ input {
       90% 50%,
       90% 50%,
       90% 50%,
-      90% 50%
-    );
-    translate: 6% 0;
-  }
-  
-  .playbutton:has(input:checked) .play_pause_icon,
-  .pause {
-    clip-path: polygon(
-      0 0,
+      90% 50%);
+  translate: 6% 0;
+}
+
+.playbutton:has(input:checked) .play_pause_icon,
+.pause {
+  clip-path: polygon(0 0,
       0 100%,
       33.33% 100%,
       33.33% 0,
@@ -119,14 +121,12 @@ input {
       100% 0,
       100% 100%,
       66.66% 100%,
-      66.66% 0
-    );
-    translate: 0 0;
-  }
-  
-  .play-2 {
-    clip-path: polygon(
-      20% 0,
+      66.66% 0);
+  translate: 0 0;
+}
+
+.play-2 {
+  clip-path: polygon(20% 0,
       20% 100%,
       35% 90%,
       35% 90%,
@@ -134,72 +134,72 @@ input {
       90% 50%,
       35% 10%,
       35% 10%,
-      35% 10%
-    );
-    translate: 6% 0;
+      35% 10%);
+  translate: 6% 0;
+}
+
+/* end play button */
+
+
+/* start playing animation */
+.loader {
+  height: 30px;
+  /* display:flex; */
+  align-items: center;
+  justify-content: center;
+
+}
+
+.loader .stroke {
+  display: block;
+  position: relative;
+  background: var(--creme);
+  height: 100%;
+  width: 8px;
+  border-radius: 50px;
+  margin: 0 5px;
+  animation: animate 1.2s linear infinite;
+}
+
+@keyframes animate {
+  50% {
+    height: 20%;
   }
-  /* end play button */
 
-
-  /* start playing animation */
-  .loader {
-    height: 30px;
-    /* display:flex; */
-    align-items: center;
-    justify-content: center;
-    
-  }
-
-  .loader .stroke {
-    display: block;
-    position:relative;
-    background: var(--creme);
+  100% {
     height: 100%;
-    width: 8px;
-    border-radius: 50px;
-    margin: 0 5px;
-    animation: animate 1.2s linear infinite;
   }
+}
 
-  @keyframes animate {
-    50%{
-        height: 20%;
-    }
+.stroke:nth-child(1) {
+  animation-delay: 0s;
+}
 
-    100%{
-        height: 100%;
-    }
-  }
+.stroke:nth-child(2) {
+  animation-delay: 0.3s;
+}
 
-  .stroke:nth-child(1) {
-    animation-delay: 0s;
-  }
+.stroke:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
-  .stroke:nth-child(2) {
-    animation-delay: 0.3s;
-  }
+.stroke:nth-child(4) {
+  animation-delay: 0.9s;
+}
 
-  .stroke:nth-child(3) {
-    animation-delay: 0.6s;
-  }
+.stroke:nth-child(5) {
+  animation-delay: 0.6s;
+}
 
-  .stroke:nth-child(4) {
-    animation-delay: 0.9s;
-  }
+.stroke:nth-child(6) {
+  animation-delay: 0.3s;
+}
 
-  .stroke:nth-child(5) {
-    animation-delay: 0.6s;
-  }
+.stroke:nth-child(7) {
+  animation-delay: 0s;
+}
 
-  .stroke:nth-child(6) {
-    animation-delay: 0.3s;
-  }
-
-  .stroke:nth-child(7) {
-    animation-delay: 0s;
-  }
-
-  /* end playing animation */
+/* end playing animation */
 
 .now-playing {
   text-wrap: wrap;
@@ -213,20 +213,20 @@ input {
 
 /* Slideshow container */
 .slideshow-container {
-  margin-bottom: -0.3em;
+  margin-bottom: -0.5em;
 }
 
- .slideshow-container img {
-    width: 100%;
-    margin: 0;
-  }
- 
-  /* Hide the images by default */
-  .mySlides {
-    display: none;
-  }
-  
-  /* Next & previous buttons
+.slideshow-container img {
+  width: 100%;
+  margin: 0;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons
   .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -243,74 +243,133 @@ input {
   }
   
   /* Position the "next button" to the right */
-  /* .next {
+/* .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   } */
-  
-  /* On hover, add a black background color with a little bit see-through */
-  /* .prev:hover, .next:hover {
+
+/* On hover, add a black background color with a little bit see-through */
+/* .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
   } */
 /* 
   .active, .dot:hover {
     background-color: #717171;
-  } */ */
-  
-  /* Fading animation */
-  .fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
-  
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  } 
+  } */
+*/
 
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
 
-  /* Shows Gallery */
-
-  .shows-heading {
-    text-align: center;
-    font-family: 'Grand Hotel', sans-serif;
-    background-color: #FF7F50;
-    color: #13154e;
-  }
- 
-  .gallery-wrap {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 70vh;
-  }
-  
-  .item {
-    flex: 1;
-    height: 20dvh;
-    background-position: center;
-    background-size: cover;
-    background-repeat: none;
-    transition: flex 0.8s ease;
-    
-    &:hover{
-      flex: 2;
-    }
-  }
-  
-  .item-1 { 
-    background-image: url('/images/show1.png');
-  }
-  
-  .item-2 { 
-    background-image: url('/images/show2.jpg');
-  }
-  
-  .item-3 { 
-    background-image: url('/images/show3.jpg');
-  }
-  
-  .item-4 { 
-    background-image: url('/images/show4.jpg');
+@keyframes fade {
+  from {
+    opacity: .4
   }
 
+  to {
+    opacity: 1
+  }
+}
+
+
+/* Shows Gallery */
+
+.shows-heading {
+  text-align: center;
+  font-family: 'Grand Hotel', sans-serif;
+  background-color: #FF7F50;
+  color: #13154e;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
+}
+
+.item {
+  flex: 1;
+  height: 20dvh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+
+  &:hover {
+    flex: 2;
+  }
+
+}
+
+.item-1 {
+  background-image: url('images/show1.png');
+}
+
+.item-2 {
+  background-color: #edccad;
+  color: #13154e;
+}
+
+.item-3 {
+  background-color: #FF7F50;
+  color: #13154e;
+}
+
+.item-4 {
+  background-color: #13154e;
+  color: #edccad;
+}
+
+.messaging-footer {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+
+.messaging {
+  padding-top: 0em;
+  justify-self: stretch;
+
+}
+
+.messaging p {
+  font-size: 1, 2rem;
+  display: flex;
+  justify-content: center;
+
+  font-size: 0.7rem;
+
+
+}
+
+.messaging ul {
+  margin-left: 2em;
+  padding: 1em 0 0 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.messaging li {
+  text-wrap: wrap;
+  font-size: 0.7rem;
+}
+
+.home-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-btn img {
+  width: 2em;
+}
