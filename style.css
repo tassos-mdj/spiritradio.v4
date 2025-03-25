@@ -226,38 +226,6 @@ label {
   display: none;
 }
 
-/* Next & previous buttons
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  /* Position the "next button" to the right */
-/* .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  } */
-
-/* On hover, add a black background color with a little bit see-through */
-/* .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  } */
-/* 
-  .active, .dot:hover {
-    background-color: #717171;
-  } */
-*/
-
 /* Fading animation */
 .fade {
   animation-name: fade;
@@ -291,42 +259,35 @@ label {
   height: 70vh;
 }
 
-.item {
-  flex: 1;
+.shows {
   height: 20dvh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: none;
-  transition: flex 0.8s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-
-  &:hover {
-    flex: 2;
-  }
-
+  overflow: hidden;
 }
 
-.item-1 {
-  background-image: url('images/show1.png');
+.shows img, .shows-page-title img {
+  width: 100%;
+  
 }
 
-.item-2 {
-  background-color: #edccad;
-  color: #13154e;
+
+/* .item-1 {
+  background-image: url('images/shows.jpeg'); 
+}*/
+
+/* .item-2 {
+  background-image: url(images/show2-bw.jpeg);
 }
 
 .item-3 {
-  background-color: #FF7F50;
-  color: #13154e;
+  background-image: url(images/show3-bw.jpeg);
 }
 
 .item-4 {
-  background-color: #13154e;
-  color: #edccad;
-}
+  background-image: url(images/show4-bw.jpeg);
+} */
 
 .messaging-footer {
   display: grid;
@@ -372,4 +333,29 @@ label {
 
 .home-btn img {
   width: 2em;
+}
+
+.shows-page-container {
+  height: 100dvh;
+  width: 100dvw;
+  display: grid;
+  grid-template-rows: 10dvh 14dvh repeat(4, 19dvh);
+  overflow: hidden;
+}
+
+.shows-page-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid var(--coral);
+  background-color: #13154e;
+  color: #edccad;
 }
