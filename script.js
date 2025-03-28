@@ -2,6 +2,7 @@ const playCheckbox = document.getElementById("checkbox");
 const loader = document.querySelector(".loader");
 const audio = document.querySelector("#live-stream");
 loader.style.display = "none";
+
 document.getElementById("checkbox_label").addEventListener("click", function () {
     if (playCheckbox.checked == false) {
         loader.style.display = "flex";
@@ -14,6 +15,7 @@ document.getElementById("checkbox_label").addEventListener("click", function () 
 
     }
 });
+
 
 
 // Reload page when visited with browser's "Back" button

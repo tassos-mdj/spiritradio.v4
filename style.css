@@ -10,6 +10,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -54,8 +58,34 @@ header {
   width: 2em;
 }
 
-menu {
-  display: none;
+.menu {
+  position: absolute;
+  transform: translateY(-300%);
+  transition: transform 0.2s;
+  top: 0;
+  /*bottom: 0;*/
+  right: 0;
+  z-index: 99;
+  background-color: #13154e;
+  list-style: none;
+  padding: 1em;
+  width: 100dvw;
+  text-align: center;
+}
+
+.menu li{
+  padding-bottom: 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 600;
+  color: #edccad;
+}
+
+.showMenu {
+  transform: translateY(10dvh);
 }
 
 .player {
@@ -339,8 +369,7 @@ label {
   height: 100dvh;
   width: 100dvw;
   display: grid;
-  grid-template-rows: 10dvh 14dvh repeat(4, 19dvh);
-  overflow: hidden;
+  grid-template-rows: 10dvh 14dvh 76dvh;
 }
 
 .shows-page-title {
@@ -350,7 +379,13 @@ label {
   overflow: hidden;
 }
 
-.show {
+.shows-inner-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.show-banner {
+  flex: 1 0 19dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -359,3 +394,12 @@ label {
   background-color: #13154e;
   color: #edccad;
 }
+
+.show {
+  background-color: #13154e;
+}
+
+.hidden {
+  display: none;
+}
+

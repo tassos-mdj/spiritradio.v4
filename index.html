@@ -17,11 +17,18 @@
     <div class="container">
         <div class="first-page-container" id="home">
             <header>
-                <h1 class="logo">Spirit Radio</h1>
+                <a href="index.html">
+                    <h1 class="logo">Spirit Radio</h1>
+                </a>
                 <div class="nav">
                     <a href="index.html#messaging"><img src="images/tlk.svg" alt="community"></a>
-                    <img src="images/menu.png" alt="menu">
-                    <menu></menu>
+                    <img src="images/menu.png" id="menu-button" alt="menu">
+                    <ul class="menu">
+                        <li><a class="menuItem" href="index.html">Home</a></li>
+                        <li><a class="menuItem" href="shows.html">Shows</a></li>
+                        <li><a class="menuItem" href="http://www.facebook.com/spiritradiogr" target="_blank">Facebook</a></li>
+                        <li><a class="menuItem" href="#">Instagram</a></li>
+                    </ul>
                 </div>
             </header>
             <div class="player">
@@ -97,6 +104,7 @@
         </div>
     </div>
     <script src="script.js?v=1"></script>
+    <script src="common.js"></script>
 </body>
 
 </html>

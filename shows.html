@@ -17,21 +17,68 @@
 
     <div class="shows-page-container">
         <header>
-            <h1 class="logo">Spirit Radio</h1>
+            <a href="index.html">
+                <h1 class="logo">Spirit Radio</h1>
+            </a>
             <div class="nav">
                 <a href="index.html#messaging"><img src="images/tlk.svg" alt="community"></a>
-                <img src="images/menu.png" alt="menu">
-                <menu></menu>
+                <img src="images/menu.png" id="menu-button" alt="menu">
+                <ul class="menu">
+                    <li><a class="menuItem" href="index.html">Home</a></li>
+                    <li><a class="menuItem" href="shows.html">Shows</a></li>
+                    <li><a class="menuItem" href="http://www.facebook.com/spiritradiogr" target="_blank">Facebook</a></li>
+                    <li><a class="menuItem" href="#">Instagram</a></li>
+                </ul>
             </div>
         </header>
         <div class="shows-page-title"><img src="images/shows.jpeg" alt="shows page"></div>
-        <div class="show">Just the 3 of Us</div>
-        <div class="show">40 Shades of Rock</div>
-        <div class="show">Love on air</div>
-        <div class="show">Around the World</div>
+        <div class="shows-inner-container">
+            <div class="show-banner" id="show1">Just the 3 of Us</div>
+            <div class="show hidden" id="show1-content">
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2Fmovie-night-07-04-2024%2F"
+                    frameborder="0"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2F%25CF%2580%25CE%25AC%25CE%25BD%25CF%2589-%25CE%25BC%25CE%25B1%25CF%2582-%25CF%2584%25CE%25BF-%25CE%25BB%25CE%25AC%25CE%25B8%25CE%25BF%25CF%2582-13-04-2024%2F"
+                    frameborder="0"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2Fsummer-nights-27-06-2024%2F"
+                    frameborder="0"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2Fblues-soul-jazz-podcast-style-10-10-2024%2F"
+                    frameborder="0"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2Fgreek-rock-07-11-2024%2F"
+                    frameborder="0"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2F%25CE%25B5%25CE%25BB%25CE%25BB%25CE%25B7%25CE%25BD%25CE%25B9%25CE%25BA%25CE%25AC-%25CE%25BD%25CF%2584%25CE%25BF%25CF%2585%25CE%25AD%25CF%2584%25CE%25B1-16-11-2024%2F"
+                    frameborder="0"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2F%25CE%25B1%25CF%2586%25CE%25B9%25CE%25AD%25CF%2581%25CF%2589%25CE%25BC%25CE%25B1-80s-27-11-2024%2F"
+                    frameborder="0"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2Fanti-blue-monday-12-01-2025%2F"
+                    frameborder="0"></iframe>
+            </div>
+            <div class="show-banner" id="show2">40 Shades of Rock</div>
+            <div class="show hidden" id="show2-content">
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2Fheavy-metal-30-01-2025%2F"
+                    frameborder="0"></iframe>
+                <iframe width="100%" height="120"
+                    src="https://player-widget.mixcloud.com/widget/iframe/?hide_cover=1&light=1&feed=%2Fspiritradiogr%2Frock-ballads-13-02-2025%2F"
+                    frameborder="0"></iframe>
+            </div>
+            <div class="show-banner" id="show3">Love on air</div>
+            <div class="show hidden" id="show3-content"></div>
+            <div class="show-banner" id="show4">Around the World</div>
+            <div class="show hidden" id="show4-content"></div>
+        </div>
     </div>
 
-    <script src="script.js?v=1"></script>
+    <script src="shows.js?v=1"></script>
+    <script src="common.js"></script>
+
 </body>
 
 </html>
