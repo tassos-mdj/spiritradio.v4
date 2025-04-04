@@ -28,7 +28,7 @@ body {
   height: 100dvh;
   width: 100dvw;
   display: grid;
-  grid-template-rows: 10dvh 35dvh;
+  grid-template-rows: 10dvh 35dvh 30dvh 5dvh 20dvh;
   overflow: hidden;
 }
 
@@ -86,6 +86,15 @@ header {
 
 .showMenu {
   transform: translateY(10dvh);
+}
+
+.player-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  opacity: 0.95;
 }
 
 .player {
@@ -247,8 +256,29 @@ label {
 }
 
 .slideshow-container img {
-  width: 100%;
+  
+  max-height: 30dvh;
   margin: 0;
+}
+
+.desk-slides-container {
+  display: flex;
+}
+
+.desk-slides-container img {
+  max-height: 30dvh;
+}
+
+@media screen and (max-width: 320px) {
+  .desk-slides-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 321px) {
+  .slideshow-container {
+    display: none;
+  }
 }
 
 /* Hide the images by default */
