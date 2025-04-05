@@ -263,21 +263,36 @@ label {
 
 .desk-slides-container {
   display: flex;
+  justify-content: space-around;
+  width: 100dvw;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  animation: desk-slides-container 20s linear infinite;
+}
+
+@keyframes desk-slides-container {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
 }
 
 .desk-slides-container img {
   max-height: 30dvh;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 430px) {
   .desk-slides-container {
     display: none;
   }
 }
 
-@media screen and (min-width: 321px) {
+@media screen and (min-width: 431px) {
   .slideshow-container {
     display: none;
+    
   }
 }
 
