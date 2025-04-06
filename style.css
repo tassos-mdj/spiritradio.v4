@@ -63,10 +63,9 @@ header {
   transform: translateY(-300%);
   transition: transform 0.2s;
   top: 0;
-  /*bottom: 0;*/
   right: 0;
   z-index: 99;
-  background-color: #13154e;
+  background-color: var(--blue);
   list-style: none;
   padding: 1em;
   width: 100dvw;
@@ -81,7 +80,7 @@ header {
   text-decoration: none;
   font-size: 32px;
   font-weight: 600;
-  color: #edccad;
+  color: var(--creme);
 }
 
 .showMenu {
@@ -334,51 +333,35 @@ label {
 }
 
 
-/* Shows Gallery */
+/* Shows Section */
 
 .shows-heading {
   text-align: center;
   font-family: 'Grand Hotel', sans-serif;
-  background-color: #FF7F50;
-  color: #13154e;
+  background-color: var(--coral);
+  color: var(--blue);
 }
 
-.gallery-wrap {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 70vh;
-}
-
-.shows {
-  height: 20dvh;
+.shows, .shows-page-title {
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  background-image: url('./images/shows.jpeg');
+  box-shadow: 0 0 5px 5px black inset;
 }
 
 .shows img, .shows-page-title img {
   width: 100%;
-  
+  max-width: 600px;
+  overflow: hidden;
 }
 
+#shows-library-img {
+  border: none;
+  box-shadow: 0 0 5px 5px black inset;
 
-/* .item-1 {
-  background-image: url('images/shows.jpeg'); 
-}*/
-
-/* .item-2 {
-  background-image: url(images/show2-bw.jpeg);
 }
-
-.item-3 {
-  background-image: url(images/show3-bw.jpeg);
-}
-
-.item-4 {
-  background-image: url(images/show4-bw.jpeg);
-} */
 
 .messaging-footer {
   display: grid;
@@ -426,18 +409,13 @@ label {
   width: 2em;
 }
 
+/* Shows.html */
+
 .shows-page-container {
   height: 100dvh;
   width: 100dvw;
   display: grid;
   grid-template-rows: 10dvh 14dvh 76dvh;
-}
-
-.shows-page-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 
 .shows-inner-container {
@@ -452,12 +430,12 @@ label {
   align-items: center;
   font-weight: bold;
   border: 1px solid var(--coral);
-  background-color: #13154e;
-  color: #edccad;
+  background-color: var(--blue);
+  color: var(--creme);
 }
 
 .show {
-  background-color: #13154e;
+  background-color: var(--blue);
 }
 
 .hidden {
