@@ -78,7 +78,7 @@ header {
 
 .menu a {
   text-decoration: none;
-  font-size: 32px;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--creme);
 }
@@ -349,6 +349,7 @@ label {
   overflow: hidden;
   background-image: url('./images/shows.jpeg');
   box-shadow: 0 0 5px 5px black inset;
+  background-size: cover;
 }
 
 .shows img, .shows-page-title img {
@@ -429,6 +430,7 @@ label {
   justify-content: center;
   align-items: center;
   font-weight: bold;
+  font-size: 1.5em;
   border: 1px solid var(--coral);
   background-color: var(--blue);
   color: var(--creme);
@@ -438,7 +440,63 @@ label {
   background-color: var(--blue);
 }
 
+#show1 {
+  background-color: #13154e;
+  background-image: url('./images/mic.svg');
+  background-size: 12dvh;
+  background-repeat: no-repeat;
+}
+
+#show2 {
+  background-color: #a2b8d2;
+  color: var(--blue);
+  background-image: url('./images/guitar.svg');
+  background-size: 17dvh;
+  background-repeat: no-repeat;
+}
+
+
+#show3 {
+  background: #DC143C;
+  color: white;
+  background-image: url('./images/heart.svg');
+  background-size: 15dvh;
+  background-repeat: no-repeat;
+
+}
+
+#show4 {
+  background-color: #008080;
+  background-image: url('./images/globe.svg');
+  background-size: 17dvh;
+  background-repeat: no-repeat;
+
+}
+
 .hidden {
   display: none;
 }
 
+/* About.html */
+
+.about-page-container {
+  width: 100dvw;
+  display: grid;
+  grid-template-rows: 10dvh;
+  gap: 2rem;
+  background-color: #13154e;
+  padding-bottom: 3rem;
+}
+
+
+.about-content {
+  justify-self: center;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  color: var(--creme);
+  padding: 0 2rem;
+}
