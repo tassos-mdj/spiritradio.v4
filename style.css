@@ -28,7 +28,8 @@ body {
   height: 100dvh;
   width: 100dvw;
   display: grid;
-  grid-template-rows: 10dvh 35dvh 30dvh 5dvh 20dvh;
+  /* grid-template-rows: 10dvh 35dvh 30dvh 5dvh 20dvh; */
+  grid-template-rows: 10dvh 65dvh 5dvh 20dvh;
   overflow: hidden;
 }
 
@@ -434,7 +435,7 @@ label {
   border: 1px solid var(--coral);
   background-color: var(--blue);
   color: var(--creme);
-
+  cursor: pointer;
 }
 
 .show {
